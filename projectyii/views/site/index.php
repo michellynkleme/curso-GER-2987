@@ -1,12 +1,25 @@
 <?php
 
+use app\classes\widgets\BeginEndWidget;
+use yii\jui\DatePicker;
+use app\classes\widgets\HelloWidget;
+
 /** @var yii\web\View $this */
 
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
     <div>
-        <?= $nome . ' ' . $sobrenome?>
+        <?= HelloWidget::widget([
+            'message' => 'Olá mundo!',
+            'submessage' => 'OLá mundo, tudo bem comigo!'
+        ]);?>
+
+        <?php BeginEndWidget::begin(['encode'=>false]) ?>
+        <h2>Video AUlas do Yii Framework</h2>
+        <h3>Video aulas reproduzidas e aplicadas neste projeto</h3>
+        <?php BeginEndWidget::end() ?>
+
     </div>
 
     <div class="jumbotron text-center bg-transparent">

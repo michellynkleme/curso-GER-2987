@@ -61,6 +61,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $myComponent = Yii::$app->myComponent;
+        $myComponent->printString();
+        die;
         return $this->render('index');
     }
 

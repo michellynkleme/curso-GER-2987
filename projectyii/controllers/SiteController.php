@@ -59,11 +59,12 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex($id, $name=null)
+    public function actionIndex()
     {
-        var_dump($id, $name);
-        die;
-        return $this->render('index');
+        return $this->render('index', [
+            'nome' => 'Michelly',
+            'sobrenome' => 'Narita'
+        ]);
     }
 
     /**

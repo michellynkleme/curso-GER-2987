@@ -1,0 +1,20 @@
+SQL ULTILIZADO PARA GERAÇÃO DE BANCO DE DADOS EM TESTE
+
+
+--------------------------------- AULA #5 -----------------------------------------------------------------------------------------
+CREATE TABLE pessoas (
+	id serial primary key,
+	nome varchar,
+	email varchar,
+	cidade varchar,
+	estado varchar
+);
+
+insert into pessoas (nome, email, cidade, estado) values ('Michelly', 'michellynarita@lemeforense.com.br', 'Curitiba', 'PR');
+insert into pessoas (nome, email, cidade, estado) values ('Marta', 'marta@lemeforense.com.br', 'Paranagua', 'PR');
+insert into pessoas (nome, email, cidade, estado) values ('Lucas', 'lucas@lemeforense.com.br', 'Sao Paulo', 'SP');
+insert into pessoas (nome, email, cidade, estado) values ('Felipe', 'felipecha@lemeforense.com.br', 'Pinhais', 'PR');
+insert into pessoas (nome, email, cidade, estado) values ('Fernanda', 'fernanda@lemeforense.com.br', 'Ponta grossa', 'PR');
+insert into pessoas (nome, email, cidade, estado) values ('Alex', 'alex@lemeforense.com.br', 'Curitiba', 'PR');
+
+----------------------------------------------------------------------------------------------------------------------------------

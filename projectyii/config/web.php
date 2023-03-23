@@ -5,6 +5,12 @@ $db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'basic',
+    'name' => 'Testando FRamework Yii',
+    'version' => '2.5',
+    'language' => 'en',
+    'sourceLanguage' => 'pt-BR',
+    'timeZone' => 'America/Fortaleza',
+    'charset' => 'UTF-8',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'aliases' => [

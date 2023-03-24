@@ -7,7 +7,7 @@ $config = [
     'id' => 'basic',
     'name' => 'Testando FRamework Yii',
     'version' => '2.5',
-    'language' => 'en',
+    'language' => 'pt_BR',
     'sourceLanguage' => 'pt-BR',
     'timeZone' => 'America/Fortaleza',
     'charset' => 'UTF-8',
@@ -28,6 +28,10 @@ $config = [
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
+        ],
+        'formatter' => [
+            'class' => 'app\classes\components\MyFormatter',
+                       'dateFormat' => 'dd/MM/YYYY'
         ],
         'user' => [
             'identityClass' => 'app\models\User',

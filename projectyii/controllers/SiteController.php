@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use RestClient;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -127,5 +128,36 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionFeed()
+    {
+        $api = new RestClient([
+            'base_url' => 'http://localhost/curso-GER-2987/projectyii/web/index.php/api',
+            'headers' => [
+                'Accept' => 'application/json'
+            ]
+        ]);
+
+
+        $api->post('default/create', [
+            'titulo' => 'Criando noticia pela aplicação',
+            'cabeca' => 'titulo inicial da noticia',
+            'corpo' => 'corpo da noticia skaskaopoaskpoakspo',
+            'status' => 1,
+        ]);
+
+        $api->put('default/7', [
+            'titulo' => 'titulo alterado'
+        ]);
+
+        $api->delete('default/7');
+
+        $result = $api->get('/default');
+        $data = Yii\helpers\Json::decode($result->response);
+
+        return $this->render('feed', [
+            'data' => $data
+        ]);
     }
 }

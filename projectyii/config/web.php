@@ -52,19 +52,22 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'showScriptName' => false,
+            'showScriptName' => true,
             'rules' => [
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'pluralize' => false,
+                    'controller' => 'api/default',
+                ],
             ],
         ],
-        */
     ],
     'modules' => [
-        'financeiro' => [
-            'class' =>'app\modules\financeiro\FinanceiroModule'
-        ]
+        'api' => [
+            'class' =>'app\modules\api\ApiModule',
+        ],
     ],
     'params' => $params,
 ];

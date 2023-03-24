@@ -1,0 +1,65 @@
+{
+    "packages": [
+        {
+            "name": "tcdent/php-restclient",
+            "version": "0.1.8.2",
+            "version_normalized": "0.1.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tcdent/php-restclient.git",
+                "reference": "9df496460b2ee5ed6729819280246448411a68ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tcdent/php-restclient/zipball/9df496460b2ee5ed6729819280246448411a68ad",
+                "reference": "9df496460b2ee5ed6729819280246448411a68ad",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "php": ">=8.0",
+                "phpunit/phpunit": ">=9.5"
+            },
+            "time": "2023-03-07T02:20:52+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "restclient.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Travis Dent",
+                    "email": "tcdent@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A generic REST API client for PHP",
+            "homepage": "http://github.com/tcdent/php-restclient",
+            "keywords": [
+                "api",
+                "client",
+                "curl",
+                "json",
+                "rest",
+                "xml"
+            ],
+            "support": {
+                "issues": "http://github.com/tcdent/php-restclient/issues",
+                "source": "https://github.com/tcdent/php-restclient/tree/0.1.8.2"
+            },
+            "install-path": "../tcdent/php-restclient"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

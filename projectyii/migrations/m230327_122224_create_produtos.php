@@ -22,7 +22,7 @@ class m230327_122224_create_produtos extends Migration
             'status' => $this->smallInteger(1)->notNull()->defaultValue(1),
         ]);
 
-        $this->addForeignKey('fk_produtos_categoria_id', 'produtos', 'categoria_id', 'categoria', 'id');
+        $this->addForeignKey('fk_produtos_categoria_id', 'produtos', 'categoria_id', 'categorias', 'id');
     }
 
     /**

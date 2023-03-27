@@ -17,4 +17,22 @@ insert into pessoas (nome, email, cidade, estado) values ('Felipe', 'felipecha@l
 insert into pessoas (nome, email, cidade, estado) values ('Fernanda', 'fernanda@lemeforense.com.br', 'Ponta grossa', 'PR');
 insert into pessoas (nome, email, cidade, estado) values ('Alex', 'alex@lemeforense.com.br', 'Curitiba', 'PR');
 
-----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------- Aula #17 ---------------------------------------------------------------------------------------
+
+CREATE TABLE noticias (
+	id serial primary key,
+	titulo varchar,
+	cabeca varchar,
+	corpo varchar,
+	status bool
+);
+
+insert into pessoas (nome, email, cidade, estado) values ('Michelly', 'michellynarita@lemeforense.com.br', 'Curitiba', 'PR');
+insert into pessoas (nome, email, cidade, estado) values ('Marta', 'marta@lemeforense.com.br', 'Paranagua', 'PR');
+insert into pessoas (nome, email, cidade, estado) values ('Lucas', 'lucas@lemeforense.com.br', 'Sao Paulo', 'SP');
+insert into pessoas (nome, email, cidade, estado) values ('Felipe', 'felipecha@lemeforense.com.br', 'Pinhais', 'PR');
+insert into pessoas (nome, email, cidade, estado) values ('Fernanda', 'fernanda@lemeforense.com.br', 'Ponta grossa', 'PR');
+insert into pessoas (nome, email, cidade, estado) values ('Alex', 'alex@lemeforense.com.br', 'Curitiba', 'PR');
+
+-------------------------------- Aula #19 ----------------------------------------------------------------------------------------
+

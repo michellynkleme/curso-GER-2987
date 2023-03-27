@@ -37,6 +37,9 @@ $config = [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
         ],
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+        ],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
@@ -57,8 +60,8 @@ $config = [
         ],
         'db' => $db,
         'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => true,
+            'enablePrettyUrl' => false,
+            'showScriptName' => false,
             'rules' => [
                 [
                     'class' => 'yii\rest\UrlRule',

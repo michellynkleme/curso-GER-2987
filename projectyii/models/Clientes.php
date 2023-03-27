@@ -9,9 +9,14 @@ use Yii;
  *
  * @property int $id
  * @property string $nome
+ * @property string $foto
  */
 class Clientes extends \yii\db\ActiveRecord
 {
+    /**
+     * $var UploadedFile
+     */
+    public $fotoCliente;
     /**
      * {@inheritdoc}
      */
@@ -27,7 +32,8 @@ class Clientes extends \yii\db\ActiveRecord
     {
         return [
             [['nome'], 'required'],
-            [['nome'], 'string', 'max' => 60],
+            ['fotoCliente', 'file', 'extensions' => 'jpg, png'],
+            [['nome', 'foto'], 'string', 'max' => 60],
         ];
     }
 
@@ -39,6 +45,8 @@ class Clientes extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'nome' => 'Nome',
+            'foto' => 'Foto do cliente',
+            'fotoCliente' => 'Foto do cliente',
         ];
     }
 }

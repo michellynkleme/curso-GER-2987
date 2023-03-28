@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Clientes;
 use RestClient;
 use Yii;
 use yii\filters\AccessControl;
@@ -64,7 +65,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $auth = Yii::$app->authManager;
+       /* $auth = Yii::$app->authManager;
         $admin = $auth->createRole('administrador');
         $supervisor = $auth->createRole('supervisor');
         $operador = $auth->createRole('operador');
@@ -103,8 +104,12 @@ class SiteController extends Controller
         var_dump(StringHelper::countWords('Yii é um framework muito bom'));
         var_dump(StringHelper::truncate('eu amo o framework yii', 3, '..'));
         var_dump(StringHelper::truncateWords('Yii é um framework muito bom', 5, 'yay'));
+        COMENTADO PARA PRÁTICA DA AULA #29
+*/
 
-
+        $cliente = new Clientes;
+        $cliente->nome = 'Michelly Narita';
+         
         return $this->render('index', [
             'nome' => 'Michelly',
             'sobrenome' => 'Narita'

@@ -109,7 +109,16 @@ class SiteController extends Controller
 
         $cliente = new Clientes;
         $cliente->nome = 'Michelly Narita';
-         
+
+        echo Yii::getAlias('@yii');
+        echo Yii::getAlias('@webroot');
+        echo  Yii::getAlias('@vendor');
+        echo  Yii::getAlias('@web');
+
+
+        echo '<p>Galeria PATH: '. Yii::getAlias('@galeriaPath'). '</p>';
+        echo '<p>Galeria URL: '. Yii::getAlias('@galeriaUrl'). '</p>';        
+
         return $this->render('index', [
             'nome' => 'Michelly',
             'sobrenome' => 'Narita'

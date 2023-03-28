@@ -3,6 +3,9 @@
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
+Yii::setAlias('@webroot', dirname(__DIR__).'/web');
+Yii::setAlias('@web', (stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://' . $_SERVER['SERVER_NAME'] . ($_SERVER['SERVER_PORT'] !== '80' ? ':' . $_SERVER['SERVER_PORT'] : '')));
+
 $config = [
     'id' => 'basic',
     'name' => 'Testando FRamework Yii',
@@ -16,6 +19,8 @@ $config = [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
+        '@galeriaPath' => '/web/uploads/galerias',
+        '@galeriaUrl' => 'http://localhost/curso-GER-2987/projectyii/web/index.php',
     ],
     'components' => [
         'request' => [

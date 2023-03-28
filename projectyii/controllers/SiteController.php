@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Cargos;
 use app\models\Clientes;
 use RestClient;
 use Yii;
@@ -11,6 +12,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Funcionarios;
 use PhpParser\Node\Expr\Assign;
 use yii\helpers\StringHelper;
 
@@ -118,6 +120,19 @@ class SiteController extends Controller
 
         echo '<p>Galeria PATH: '. Yii::getAlias('@galeriaPath'). '</p>';
         echo '<p>Galeria URL: '. Yii::getAlias('@galeriaUrl'). '</p>';        
+
+        $funcionarios = Funcionarios::find()->all();
+        foreach($funcionarios as $funcionario) {
+            echo "<h2>{$funcionario->nome} {$funcionario->cargo->nome}</h2>";
+        }
+
+        $cargos = Cargos::find()->all();
+        foreach($cargos as $cargo) {
+            echo "<h2>{$cargo->nome}</h2>";
+            foreach($cargo->funcionarios as $func) {
+                echo "<li>{$func->nome}</li>>";
+            }
+        }
 
         return $this->render('index', [
             'nome' => 'Michelly',

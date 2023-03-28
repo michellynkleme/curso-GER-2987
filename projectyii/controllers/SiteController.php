@@ -11,6 +11,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use PhpParser\Node\Expr\Assign;
+use yii\helpers\StringHelper;
 
 class SiteController extends Controller
 {
@@ -96,6 +97,13 @@ class SiteController extends Controller
         $auth->assign($admin, 1);
         $auth->assign($supervisor, 2);
         $auth->assign($operador, 3);
+
+        var_dump(StringHelper::startsWith('Yii Academy', 'Yii', false));
+        var_dump(StringHelper::endsWith('Academy Yii', 'Yii', false));
+        var_dump(StringHelper::countWords('Yii é um framework muito bom'));
+        var_dump(StringHelper::truncate('eu amo o framework yii', 3, '..'));
+        var_dump(StringHelper::truncateWords('Yii é um framework muito bom', 5, 'yay'));
+
 
         return $this->render('index', [
             'nome' => 'Michelly',

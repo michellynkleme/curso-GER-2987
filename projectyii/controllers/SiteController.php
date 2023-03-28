@@ -103,6 +103,19 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionShop()
+    {
+        $this->layout = 'shop';
+        return $this->render('shop');
+    }
+
+    public function actionServices()
+    {
+        $this->layout = 'shop';
+
+        return $this->render('services');
+    }
+
     public function actionTestPermission($userId)
     {
         $auth = Yii::$app->authManager;

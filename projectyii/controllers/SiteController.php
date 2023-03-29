@@ -13,6 +13,8 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Funcionarios;
+use app\models\PessoaFisica;
+use app\models\Pessoas;
 use PhpParser\Node\Expr\Assign;
 use yii\helpers\StringHelper;
 
@@ -121,7 +123,7 @@ class SiteController extends Controller
         echo '<p>Galeria PATH: '. Yii::getAlias('@galeriaPath'). '</p>';
         echo '<p>Galeria URL: '. Yii::getAlias('@galeriaUrl'). '</p>';        
 
-        $funcionarios = Funcionarios::find()->all();
+        /* $funcionarios = Funcionarios::find()->all();
         foreach($funcionarios as $funcionario) {
             echo "<h2>{$funcionario->nome} {$funcionario->cargo->nome}</h2>";
         }
@@ -132,6 +134,16 @@ class SiteController extends Controller
             foreach($cargo->funcionarios as $func) {
                 echo "<li>{$func->nome}</li>>";
             }
+        } Aula 31*/
+
+        $pessoas = Pessoas::find()->all();
+        foreach($pessoas as $pessoa) {
+            echo "<h2>{$pessoa->nome} {$pessoa->pessoaFisica->cpf}</h2>";
+        }
+
+        $pessoasf = PessoaFisica::find()->all();
+        foreach($pessoasf as $pessoaf) {
+            echo "<h2>{$pessoaf->pessoa->estado}</h2>";
         }
 
         return $this->render('index', [

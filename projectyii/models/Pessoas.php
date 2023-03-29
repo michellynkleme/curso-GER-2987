@@ -33,6 +33,11 @@ class Pessoas extends \yii\db\ActiveRecord
         ];
     }
 
+    public function getPessoaFisica()
+    {
+        return $this->hasOne(PessoaFisica::class, ['id' => 'id']);
+    }
+
     /**
      * {@inheritdoc}
      */

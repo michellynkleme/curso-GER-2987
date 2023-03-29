@@ -15,6 +15,7 @@ use app\models\ContactForm;
 use app\models\Funcionarios;
 use app\models\PessoaFisica;
 use app\models\Pessoas;
+use app\models\Programadores;
 use PhpParser\Node\Expr\Assign;
 use yii\helpers\StringHelper;
 
@@ -136,7 +137,7 @@ class SiteController extends Controller
             }
         } Aula 31*/
 
-        $pessoas = Pessoas::find()->all();
+        /* $pessoas = Pessoas::find()->all();
         foreach($pessoas as $pessoa) {
             echo "<h2>{$pessoa->nome} {$pessoa->pessoaFisica->cpf}</h2>";
         }
@@ -144,6 +145,14 @@ class SiteController extends Controller
         $pessoasf = PessoaFisica::find()->all();
         foreach($pessoasf as $pessoaf) {
             echo "<h2>{$pessoaf->pessoa->estado}</h2>";
+        } Aula 32 */
+
+        $programadores = Programadores::find()->all();
+        foreach($programadores as $programador) {
+            echo "<h2>{$programador->nome}</h2>";
+            foreach($programador->linguagens as $func) {
+                echo "<li>{$func->nome}</li>>";
+            }
         }
 
         return $this->render('index', [
